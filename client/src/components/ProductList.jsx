@@ -1,11 +1,22 @@
 import PropTypes from "prop-types";
-import { Grid } from "@mui/material";
+import { Box } from "@mui/material";
 import ProductCard from "./ProductCard";
 
 const ProductList = ({ products, cart, toggleCartItem }) => {
   return (
     <div>
-      <Grid container spacing={6}>
+      <Box
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          gap: "20px",
+          justifyContent: "space-between",
+          "&::after": {
+            content: '""',
+            flex: "auto",
+          },
+        }}
+      >
         {products.map((product) => (
           <ProductCard
             key={product._id}
@@ -14,7 +25,7 @@ const ProductList = ({ products, cart, toggleCartItem }) => {
             toggleCartItem={toggleCartItem}
           />
         ))}
-      </Grid>
+      </Box>
     </div>
   );
 };

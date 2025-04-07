@@ -5,7 +5,6 @@ import {
   CardMedia,
   Typography,
   Button,
-  Grid,
   Box,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
@@ -44,7 +43,26 @@ const ProductCard = ({ product, isInCart, toggleCartItem, isOrderStage }) => {
   }, [toggleCartItem, product]);
 
   return (
-    <Grid item xs={12} sm={6} md={3}>
+    <Box
+      sx={{
+        flex: "1 1 calc(25% - 16px)",
+        maxWidth: "calc(25% - 16px)",
+        boxSizing: "border-box",
+
+        "@media (max-width:1200px)": {
+          flex: "1 1 calc(33.33% - 16px)",
+          maxWidth: "calc(33.33% - 16px)",
+        },
+        "@media (max-width:900px)": {
+          flex: "1 1 calc(50% - 16px)",
+          maxWidth: "calc(50% - 16px)",
+        },
+        "@media (max-width:600px)": {
+          flex: "1 1 100%",
+          maxWidth: "100%",
+        },
+      }}
+    >
       <Card sx={{ position: "relative", ...formStyle.card }}>
         {!isOrderStage && (
           <Box
@@ -67,7 +85,7 @@ const ProductCard = ({ product, isInCart, toggleCartItem, isOrderStage }) => {
                 justifyContent: "center",
                 alignItems: "center",
                 width: "100%",
-                paddingTop: "3rem",
+                paddingTop: "2.5rem",
               }}
             >
               <CardMedia
@@ -78,7 +96,7 @@ const ProductCard = ({ product, isInCart, toggleCartItem, isOrderStage }) => {
                   width: "180px",
                   height: "180px",
                   objectFit: "cover",
-                  mb: 5,
+                  mb: 3,
                 }}
               />
             </Box>
@@ -108,7 +126,7 @@ const ProductCard = ({ product, isInCart, toggleCartItem, isOrderStage }) => {
                 variant="contained"
                 color="secondary"
                 onClick={handleNavigate}
-                sx={formStyle.buttonWide}
+                sx={{ ...formStyle.buttonWide, mt: 0 }}
               >
                 View details
               </Button>
@@ -119,8 +137,8 @@ const ProductCard = ({ product, isInCart, toggleCartItem, isOrderStage }) => {
                 onClick={handleToggleCart}
                 sx={
                   isInCart
-                    ? { ...formStyle.buttonWide, color: "#178388" }
-                    : { ...formStyle.buttonWide, color: "#ffffff" }
+                    ? { ...formStyle.buttonWide, color: "#178388", mt: 0 }
+                    : { ...formStyle.buttonWide, color: "#ffffff", mt: 0 }
                 }
               >
                 {isInCart ? "Remove from Cart" : "Add to Cart"}
@@ -129,7 +147,7 @@ const ProductCard = ({ product, isInCart, toggleCartItem, isOrderStage }) => {
           </Box>
         </CardContent>
       </Card>
-    </Grid>
+    </Box>
   );
 };
 
