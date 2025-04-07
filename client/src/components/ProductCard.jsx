@@ -50,8 +50,8 @@ const ProductCard = ({ product, isInCart, toggleCartItem, isOrderStage }) => {
           <Box
             sx={{
               position: "absolute",
-              top: 12,
-              right: 12,
+              top: { xs: 8, sm: 10, md: 12 },
+              right: { xs: 6, sm: 8, md: 10 },
               zIndex: 1,
             }}
           >
@@ -67,6 +67,7 @@ const ProductCard = ({ product, isInCart, toggleCartItem, isOrderStage }) => {
                 justifyContent: "center",
                 alignItems: "center",
                 width: "100%",
+                paddingTop: "3rem",
               }}
             >
               <CardMedia
