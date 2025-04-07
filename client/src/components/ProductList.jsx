@@ -10,6 +10,11 @@ const ProductList = ({ products, cart, toggleCartItem }) => {
           display: "flex",
           flexWrap: "wrap",
           gap: "20px",
+          justifyContent: "space-between",
+          "&::after": {
+            content: '""',
+            flex: "auto",
+          },
         }}
       >
         {products.map((product) => (
