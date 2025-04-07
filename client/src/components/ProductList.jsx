@@ -9,7 +9,6 @@ const ProductList = ({ products, cart, toggleCartItem }) => {
         sx={{
           display: "flex",
           flexWrap: "wrap",
-          justifyContent: "space-between",
           gap: "20px",
         }}
       >
