@@ -4,8 +4,7 @@ BoardSwap is a community-driven online marketplace for board game and puzzle lov
 
 This is the final project for the HackYourFuture curriculum we did as a cohort using the [MERN stack](https://www.mongodb.com/resources/languages/mern-stack) by following the agile methodology with our team and a group of mentors 👨‍💻👩‍💻👨‍💻👩‍💻. A quick guide to what we built:
 
-Demo:
-`https://c50-group-b.hackyourfuture.tech/`
+🔗 [Live Demo](https://c50-group-b.hackyourfuture.tech/)
 
 ## 1. ✨ Features
 
