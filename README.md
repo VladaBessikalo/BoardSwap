@@ -9,23 +9,17 @@ Demo:
 
 ## 1. ✨ Features
 
-- ** User Authentication
-Sign up, log in, and log out securely.
+- User Authentication - Sign up, log in, and log out securely.
 
-- ** Browse Items
-Explore all available board games and puzzles on the homepage.
+- Browse Items - Explore all available board games and puzzles on the homepage.
 
-- ** Share with Friends
-Share any listing directly via WhatsApp or copy a link to send it anywhere.
+- Share with Friends - Share any listing directly via WhatsApp or copy a link to send it anywhere.
 
-- ** Sell Your Games
-Add items for sale with just a few clicks. Upload images, provide details, and wait for the right buyer.
+- Sell Your Games - Add items for sale with just a few clicks. Upload images, provide details, and wait for the right buyer.
 
-- ** Buy with Ease
-Add items to your cart, complete an order form, and process payments smoothly.
+- Buy with Ease - Add items to your cart, complete an order form, and process payments smoothly.
 
-- ** User Dashboard
-Manage your personal profile, view your items, and track order history.
+- User Dashboard - Manage your personal profile, view your items, and track order history.
 
 
 ## 🗂️ 2. Code structure
@@ -37,10 +31,19 @@ client
 |   └── __tests__
 |   └── __testUtils__
 |   └── components
+|   └── context
 |   └── hooks
+|       └── useFetch
+|       └── useForm
 |   └── pages
-|       └── __tests__
-|       └── components
+|       └── Home
+|       └── Item
+|       └── NotFound
+|       └── Order
+|       └── User
+|   └── routes
+|       └── AppRoutes
+|       └── PrivateRoute
 |   └── util
 |   index.jsx
 cypress
@@ -59,37 +62,6 @@ server
     └── util
     index.js
 ```
-
-### 2.1 Client structure
-
-- `public` || public facing client code
-- `__tests__` || any `jest` tests for specific components will be in a `__tests__` folder on the same level
-- `__testUtils__` || any code that is only being used in the tests is put in the `__testUtils__` folder to separate that away from the rest of the code
-- `components` || all of our shared components that are used over multiple pages
-- `hooks` || all of our custom hooks
-- `pages` || the page components of our app, any routing will go between these components
-- `pages/components` || components used specifically on those pages
-- `util` || any utility functions that can be used anywhere on the client side
-- `main.jsx` || the start point of the client
-- `vite.config.js` || to configure vite
-
-### 2.2 Cypress structure
-
-- `fixtures` || any data/files that `cypress` needs can be placed here
-- `integration` || all of our tests are in here, separated in folders based on the pages in our app
-- `plugins` || any plugins for our `cypress` configuration can be placed here
-- `support` || custom commands and other support files for `cypress` can be placed here
-
-### 2.3 Server structure
-
-- `__tests__` || any `jest` tests for the api endpoints as that is our testing strategy for the backend
-- `__testUtils__` || any code that is only being used in the tests is put in the `__testUtils__` folder to separate that away from the rest of the code
-- `controllers` || all of our controller functions that interact with the database
-- `db` || all of our configuration for the database
-- `models` || all of our `mongoose` models will be placed here
-- `routes` || code to match up the API with our controllers
-- `util` || any utility functions that can be used anywhere on the server side
-- `index.js` || the start point of the server
 
 ## 🛠️ 3. Stack / external libraries
 
