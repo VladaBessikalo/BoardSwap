@@ -1,30 +1,34 @@
-`TODO: Add a nice screenshot of the app!`
+# BoardSwap 🎲 
 
-# Cohort XX final project
+BoardSwap is a community-driven online marketplace for board game and puzzle lovers. Whether you’re looking to clear out your shelf or discover your next favorite game, BoardSwap makes buying and selling fun, easy, and social.
 
-This is the final project for the HackYourFuture curriculum we did as a cohort using the [MERN stack](https://www.mongodb.com/resources/languages/mern-stack) by following the agile methodology with our team and a group of mentors. A quick guide to what we built:
+This is the final project for the HackYourFuture curriculum we did as a cohort using the [MERN stack](https://www.mongodb.com/resources/languages/mern-stack) by following the agile methodology with our team and a group of mentors 👨‍💻👩‍💻👨‍💻👩‍💻. A quick guide to what we built:
 
-> TODO: Add short description of the app
+Demo:
+`https://c50-group-b.hackyourfuture.tech/`
 
-`[Click here for the Demo version](TODO: add link)`
+## 1. ✨ Features
 
-## 1. Setup
+- ** User Authentication
+Sign up, log in, and log out securely.
 
-First, to setup all the directories run the following in the main directory:
+- ** Browse Items
+Explore all available board games and puzzles on the homepage.
 
-`npm install`
+- ** Share with Friends
+Share any listing directly via WhatsApp or copy a link to send it anywhere.
 
-`npm run setup`
+- ** Sell Your Games
+Add items for sale with just a few clicks. Upload images, provide details, and wait for the right buyer.
 
-The first command will install `cypress` and some small libraries needed for running the rest of the commands. The second will go into the `client` and `server` directories and set those up to be ran.
+- ** Buy with Ease
+Add items to your cart, complete an order form, and process payments smoothly.
 
-In the `client` and `server` directory there are two `.env.example` files. Create a copy and rename that to `.env`. Then follow the instructions in those files to fill in the right values.
+- ** User Dashboard
+Manage your personal profile, view your items, and track order history.
 
-To run the app in dev mode you can run the following command in the main directory:
 
-`npm run dev`
-
-## 2. Code structure
+## 🗂️ 2. Code structure
 
 ```
 client
@@ -87,7 +91,7 @@ server
 - `util` || any utility functions that can be used anywhere on the server side
 - `index.js` || the start point of the server
 
-## 3. Stack / external libraries
+## 🛠️ 3. Stack / external libraries
 
 The base stack of the app is a MERN stack (Mongoose, Express, React, Node). Next to that we make use of the following extras:
 
@@ -104,6 +108,7 @@ For more information on how these work together including the automatic deployme
 
 ### 3.2 Client-side libraries
 
+- `Material UI (MUI)` || Component library for sleek, accessible UI design. See [docs](https://mui.com/)
 - `@testing-library/*` || We use React Testing Library to write all of our tests. See [docs](https://testing-library.com/docs/react-testing-library/intro/)
 - `jest` || To run our tests and coverage. See [docs](https://jestjs.io/)
 - `jest-fetch-mock` || To mock out the backend for our testing purposes. See [docs](https://github.com/jefflau/jest-fetch-mock#readme)
@@ -117,3 +122,15 @@ For more information on how these work together including the automatic deployme
 - `mongodb-memory-server` || To mock out our database in our backend tests. See [docs](https://github.com/nodkz/mongodb-memory-server)
 - `cors` || To open up our API. See [docs](https://github.com/expressjs/cors#readme)
 - `mongoose` || To add schemas to our database. See [docs](https://mongoosejs.com/)
+
+### 3.4 Media & Asset Management
+
+- `Cloudinary` || – Image hosting and transformation service. Used to upload and manage listing images. See [docs](https://cloudinary.com/documentation)
+
+### 3.5 Deployment & CI/CD
+
+- `Heroku` || Hosting for the full-stack app.
+
+
+## 🤝 Contributing
+Contributions are welcome! Feel free to fork this repository, create a new branch, and submit a pull request.
