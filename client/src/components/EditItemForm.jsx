@@ -38,7 +38,7 @@ const EditItemForm = () => {
     condition: "",
     photo_name: "",
     photo:
-      "https://res.cloudinary.com/dogm5xki5/image/upload/v1742978122/qfsn7oqaob87rxurw5xq.jpg",
+      "https://res.cloudinary.com/dedkemoef/image/upload/v1746018385/ChatGPT_Image_Apr_30_2025_03_05_53_PM_l9rxk1.png",
     description: "",
     status: "",
     seller_id: "",
